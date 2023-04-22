@@ -11,7 +11,7 @@ intents.message_content = True
 
 DISCORD_BOT_TOKEN = os.environ['DISCORD_BOT_TOKEN']
 
-client = discord.Client(intents=intents)
+client = discord.Bot(intents=intents)
 
 
 def handle_response(message):
