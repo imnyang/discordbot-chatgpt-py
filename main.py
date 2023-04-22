@@ -32,13 +32,10 @@ def handle_response(message):
 async def on_ready():
     print(f'Logged in as {client.user}.')
 
-
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-    response = handle_response(message)
-    await message.channel.send(response)
+@client.command()
+async def chatgpt(ctx, answer:str):
+    response = handle_response(answer)
+    await ctx.respond(response)
 
 try:
     client.run(DISCORD_BOT_TOKEN)
