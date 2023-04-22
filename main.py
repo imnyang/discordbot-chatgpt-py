@@ -18,7 +18,7 @@ def handle_response(message):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "OpenAI Discord Bot"},
+            {"role": "system", "content": "시루"},
             {"role": "user", "content": f"{message}"},
        ]
     )
