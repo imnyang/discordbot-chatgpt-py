@@ -19,7 +19,7 @@ def handle_response(message):
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "OpenAI Discord Bot"},
-            {"role": "user", "content": f"{message.content}"},
+            {"role": "user", "content": f"{message}"},
        ]
     )
 
